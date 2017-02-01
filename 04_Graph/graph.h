@@ -21,9 +21,12 @@ void DFS_Matrix(GraphMatrix *gm); /* 여러 개의 연결 요소로 구성된 그래프를 깊이 
 void DFS_recursive(GraphMatrix *gm, int vNum); /* 연결되어있는 하나의 그래트내의 모든 정점을 재귀호출기법으로 방문하는 함수 */
 void visit(int vNum);   /* 방문한 정점의 처리 */
 void nrDFS_Matrix(GraphMatrix *gm); /* 여러 개의 연결 요소로 구성된 그래프를 깊이 우선 탐색하기 위한 함수(비 재귀판) */
-void BFS_Matrix(GraphMatrix *gm); /* 여러 개의 연결 요소로 구성된 그래프를 너비 우선 탐색하기 위한 함수(비 재귀판) */
+void nrBFS_Matrix(GraphMatrix *gm);
+void BFS_Matrix(GraphMatrix *gm); /* 여러 개의 연결 요소로 구성된 그래프를 너비 우선 탐색하기 위한 함수(재귀판) */
 int countGraphComponents(GraphMatrix *gm); /* 인접 행렬법으로 표기되 그래프 내의 연결 요소별로 정점들을 출력하고 연결 요소의 개수를 리턴하는 함수 */
 
+void check_clear(int n); // check 초기화
+void BFS_Mt(GraphMatrix *gm, int checker, int pin); // BFS_matrix 보조함수
 /*---------------------------------------------
         GraphList 처리 구조체 및 활용 함수
 ----------------------------------------------*/

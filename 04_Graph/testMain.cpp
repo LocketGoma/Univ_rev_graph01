@@ -11,24 +11,25 @@ int main()
 	initGraph(&gm, "c:\\data\\graphData1.txt");/* 그래프 초기화 */
 	outputGraph(&gm);   /* 그래프 상태 출력*/        
 
-	/*displayTitle("DFS 방문(비재귀판)");
+	displayTitle("DFS 방문(비재귀판)");
 	nrDFS_Matrix(&gm);
 
 	displayTitle("DFS 방문(재귀판)");
-	DFS_Matrix(&gm);
+	//DFS_Matrix(&gm);
 
-	displayTitle("BFS 방문");
-	BFS_Matrix(&gm);
-
+	nrBFS_Matrix(&gm);
+	//displayTitle("BFS 방문");
+	BFS_Matrix(&gm); // 재귀 BFS
+	/*
 	displayTitle("그래프 내의 연결 요소 보기");
 	compCount = countGraphComponents(&gm);
 	printf("\n그래프 내의 총 연결 요소의 개수 : %d개\n\n", compCount);
 */
 	printf("\n\n");
 
-	initGraph_List(&gl, "c:\\data\\graphData1.txt");
-	outputGraph_List(&gl);  
-//	destroyGraph_List(&gl);
+	//initGraph_List(&gl, "c:\\data\\graphData1.txt");
+	//outputGraph_List(&gl);  
+	destroyGraph_List(&gl);
 	return 0;
 }
 
